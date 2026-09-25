@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <!-- Подпись отсчёта: "До конца пары" / "До начала пары" -->
+    <TextView
+        android:id="@+id/widgetCountdownLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11sp"
+        android:textColor="#66665F"
+        android:textAllCaps="false" />
+
+    <!-- Большой обратный отсчёт -->
+    <TextView
+        android:id="@+id/widgetCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--:--"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        android:textColor="#C96442"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/widgetEmptyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Пар сегодня нет"
+        android:textSize="13sp"
+        android:textColor="#9C9C96"
+        android:visibility="gone" />
+
+    <!-- Текущая пара -->
+    <LinearLayout
+        android:id="@+id/widgetCurrentRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/widgetCurrentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сейчас"
+            android:textSize="11sp"
+            android:textColor="#C96442"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widgetCurrentSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#ECECE8"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/widgetCurrentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#9C9C96" />
+    </LinearLayout>
+
+    <!-- Следующая пара -->
+    <LinearLayout
+        android:id="@+id/widgetNextRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/widgetNextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:textSize="11sp"
+            android:textColor="#9C9C96"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widgetNextSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#C4C4BE"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/widgetNextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#767670" />
+    </LinearLayout>
+
+</LinearLayout>
